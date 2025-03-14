@@ -18,7 +18,9 @@ custom_openai_client = AsyncOpenAI(
     base_url="https://api.openai.com/v1",
     api_key=OPENAI_API_KEY,
 )
+
 set_default_openai_client(custom_openai_client)
+set_tracing_disabled(True)
 
 
 async def run_multi_agent_models():
